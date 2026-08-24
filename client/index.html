@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        AI Infinite Cyber City
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================================= -->
+    <!-- LOADING SCREEN -->
+    <!-- ================================================= -->
+
+    <section
+        id="loading-screen"
+        class="screen"
+    >
+
+        <div class="loading-box">
+
+            <div class="logo-small">
+                AICC
+            </div>
+
+            <h1>
+                AI INFINITE CYBER CITY
+            </h1>
+
+            <p>
+                Initializing Cyber District...
+            </p>
+
+            <div class="loading-bar">
+
+                <div
+                    id="loading-progress"
+                    class="loading-progress"
+                ></div>
+
+            </div>
+
+            <div
+                id="loading-percent"
+                class="loading-percent"
+            >
+                0%
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- MAIN MENU -->
+    <!-- ================================================= -->
+
+    <section
+        id="main-menu"
+        class="screen hidden"
+    >
+
+        <div class="menu-container">
+
+            <div class="game-logo">
+
+                <div class="logo-icon">
+                    AICC
+                </div>
+
+                <h1>
+                    AI INFINITE
+                </h1>
+
+                <h2>
+                    CYBER CITY
+                </h2>
+
+                <p>
+                    LIGHTWEIGHT FINAL YEAR EDITION
+                </p>
+
+            </div>
+
+
+            <div class="menu-buttons">
+
+                <button
+                    id="start-button"
+                    class="menu-button primary"
+                >
+                    START MISSION
+                </button>
+
+
+                <button
+                    id="controls-button"
+                    class="menu-button"
+                >
+                    CONTROLS
+                </button>
+
+
+                <button
+                    id="about-button"
+                    class="menu-button"
+                >
+                    ABOUT PROJECT
+                </button>
+
+            </div>
+
+
+            <div class="menu-footer">
+
+                B.Tech CSE Final Year Project
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- CONTROLS SCREEN -->
+    <!-- ================================================= -->
+
+    <section
+        id="controls-screen"
+        class="screen hidden"
+    >
+
+        <div class="panel">
+
+            <h1>
+                CONTROLS
+            </h1>
+
+
+            <div class="control-list">
+
+                <div class="control-row">
+
+                    <span class="key">
+                        W
+                    </span>
+
+                    <span>
+                        Move Forward
+                    </span>
+
+                </div>
+
+
+                <div class="control-row">
+
+                    <span class="key">
+                        A
+                    </span>
+
+                    <span>
+                        Move Left
+                    </span>
+
+                </div>
+
+
+                <div class="control-row">
+
+                    <span class="key">
+                        S
+                    </span>
+
+                    <span>
+                        Move Backward
+                    </span>
+
+                </div>
+
+
+                <div class="control-row">
+
+                    <span class="key">
+                        D
+                    </span>
+
+                    <span>
+                        Move Right
+                    </span>
+
+                </div>
+
+
+                <div class="control-row">
+
+                    <span class="key">
+                        SHIFT
+                    </span>
+
+                    <span>
+                        Run
+                    </span>
+
+                </div>
+
+
+                <div class="control-row">
+
+                    <span class="key">
+                        E
+                    </span>
+
+                    <span>
+                        Interact / Collect Data
+                    </span>
+
+                </div>
+
+
+                <div class="control-row">
+
+                    <span class="key">
+                        ESC
+                    </span>
+
+                    <span>
+                        Pause Game
+                    </span>
+
+                </div>
+
+
+                <div class="control-row">
+
+                    <span class="key">
+                        MOUSE
+                    </span>
+
+                    <span>
+                        Look Around
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="controls-back-button"
+                class="menu-button"
+            >
+                BACK
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- ABOUT SCREEN -->
+    <!-- ================================================= -->
+
+    <section
+        id="about-screen"
+        class="screen hidden"
+    >
+
+        <div class="panel">
+
+            <h1>
+                ABOUT PROJECT
+            </h1>
+
+
+            <p class="about-text">
+
+                AI Infinite Cyber City is a lightweight
+                browser-based cyber city game developed
+                as a B.Tech CSE final year project.
+
+            </p>
+
+
+            <p class="about-text">
+
+                The project demonstrates interactive
+                3D graphics, player movement, mission
+                management, basic AI police behavior,
+                collision boundaries and game-state
+                management.
+
+            </p>
+
+
+            <div class="tech-list">
+
+                <span>
+                    HTML5
+                </span>
+
+                <span>
+                    CSS3
+                </span>
+
+                <span>
+                    JavaScript
+                </span>
+
+                <span>
+                    Three.js
+                </span>
+
+            </div>
+
+
+            <button
+                id="about-back-button"
+                class="menu-button"
+            >
+                BACK
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- GAME SCREEN -->
+    <!-- ================================================= -->
+
+    <section
+        id="game-screen"
+        class="screen game-screen hidden"
+    >
+
+        <!-- ============================================= -->
+        <!-- THREE.JS CANVAS -->
+        <!-- ============================================= -->
+
+        <canvas
+            id="game-canvas"
+        ></canvas>
+
+
+        <!-- ============================================= -->
+        <!-- HUD -->
+        <!-- ============================================= -->
+
+        <div
+            id="game-hud"
+            class="game-hud"
+        >
+
+
+            <!-- ========================================= -->
+            <!-- TOP LEFT -->
+            <!-- ========================================= -->
+
+            <div class="hud-left">
+
+
+                <!-- ===================================== -->
+                <!-- HEALTH -->
+                <!-- ===================================== -->
+
+                <div class="hud-card health-card">
+
+                    <div class="hud-label">
+                        HEALTH
+                    </div>
+
+
+                    <div class="health-bar">
+
+                        <div
+                            id="health-fill"
+                            class="health-fill"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="health-number">
+
+                        <span
+                            id="health-text"
+                        >
+                            100
+                        </span>
+
+                        / 100
+
+                    </div>
+
+                </div>
+
+
+                <!-- ===================================== -->
+                <!-- WANTED -->
+                <!-- ===================================== -->
+
+                <div class="hud-card wanted-card">
+
+                    <div class="hud-label">
+                        WANTED
+                    </div>
+
+                    <div
+                        id="wanted-level"
+                        class="wanted-level"
+                    >
+                        ☆☆☆☆☆
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ========================================= -->
+            <!-- TOP CENTER -->
+            <!-- ========================================= -->
+
+            <div class="hud-location">
+
+                <span
+                    id="location-text"
+                >
+                    CYBER DISTRICT
+                </span>
+
+            </div>
+
+
+
+            <!-- ========================================= -->
+            <!-- TOP RIGHT -->
+            <!-- ========================================= -->
+
+            <button
+                id="pause-button"
+                class="pause-button"
+            >
+                ||
+            </button>
+
+
+
+            <!-- ========================================= -->
+            <!-- MISSION PANEL -->
+            <!-- ========================================= -->
+
+            <div class="mission-panel">
+
+                <div class="mission-label">
+                    ACTIVE MISSION
+                </div>
+
+
+                <div
+                    id="mission-name"
+                    class="mission-name"
+                >
+                    Cyber Data Heist
+                </div>
+
+
+                <div
+                    id="mission-objective"
+                    class="mission-objective"
+                >
+                    Reach the marked location.
+                </div>
+
+
+                <div
+                    id="mission-distance"
+                    class="mission-distance"
+                >
+                    Distance: --
+                </div>
+
+            </div>
+
+
+
+            <!-- ========================================= -->
+            <!-- INTERACTION -->
+            <!-- ========================================= -->
+
+            <div
+                id="interaction-message"
+                class="interaction-message hidden"
+            >
+                Press E to interact
+            </div>
+
+
+
+            <!-- ========================================= -->
+            <!-- STATUS -->
+            <!-- ========================================= -->
+
+            <div
+                id="status-message"
+                class="status-message"
+            >
+                Mission ready.
+            </div>
+
+
+
+            <!-- ========================================= -->
+            <!-- CROSSHAIR -->
+            <!-- ========================================= -->
+
+            <div class="crosshair">
+
+                <span></span>
+
+                <span></span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- PAUSE SCREEN -->
+    <!-- ================================================= -->
+
+    <section
+        id="pause-screen"
+        class="overlay-screen hidden"
+    >
+
+        <div class="panel">
+
+            <h1>
+                GAME PAUSED
+            </h1>
+
+            <p>
+                The Cyber District is waiting.
+            </p>
+
+
+            <button
+                id="resume-button"
+                class="menu-button primary"
+            >
+                RESUME
+            </button>
+
+
+            <button
+                id="pause-menu-button"
+                class="menu-button"
+            >
+                MAIN MENU
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- MISSION SUCCESS -->
+    <!-- ================================================= -->
+
+    <section
+        id="success-screen"
+        class="overlay-screen hidden"
+    >
+
+        <div class="panel result-panel">
+
+            <div class="result-icon success-icon">
+                ✓
+            </div>
+
+
+            <h1>
+                MISSION SUCCESS
+            </h1>
+
+
+            <p>
+                Cyber data secured successfully.
+            </p>
+
+
+            <p class="result-small">
+                The Cyber District has been breached.
+            </p>
+
+
+            <button
+                id="success-restart-button"
+                class="menu-button primary"
+            >
+                PLAY AGAIN
+            </button>
+
+
+            <button
+                id="success-menu-button"
+                class="menu-button"
+            >
+                MAIN MENU
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- GAME OVER -->
+    <!-- ================================================= -->
+
+    <section
+        id="game-over-screen"
+        class="overlay-screen hidden"
+    >
+
+        <div class="panel result-panel">
+
+            <div class="result-icon danger-icon">
+                ×
+            </div>
+
+
+            <h1>
+                GAME OVER
+            </h1>
+
+
+            <p
+                id="game-over-message"
+            >
+                You were caught.
+            </p>
+
+
+            <p class="result-small">
+                The police secured the area.
+            </p>
+
+
+            <button
+                id="game-over-restart-button"
+                class="menu-button primary"
+            >
+                TRY AGAIN
+            </button>
+
+
+            <button
+                id="game-over-menu-button"
+                class="menu-button"
+            >
+                MAIN MENU
+            </button>
+<button id="start-button">START MISSION</button>
+
+<button id="controls-button">CONTROLS</button>
+
+<button id="about-button">ABOUT PROJECT</button>
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- THREE.JS -->
+    <!-- ================================================= -->
+
+    <script
+        type="module"
+        src="./js/main.js"
+    ></script>
+
+
+</body>
+
+</html>

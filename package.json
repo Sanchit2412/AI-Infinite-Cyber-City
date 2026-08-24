@@ -1,0 +1,12 @@
+{
+  "name": "ai-infinite-cyber-city",
+  "version": "1.0.0",
+  "description": "Lightweight 3D cyber city game for B.Tech final year project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "three": "^0.185.1"
+  }
+}
